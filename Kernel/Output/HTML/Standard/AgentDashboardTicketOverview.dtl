@@ -1,0 +1,64 @@
+# --
+# AgentTicketOverview.dtl - Displays Overview of open Tickets for global dashboard
+# Copyright (C) 2013 Daniel Obée
+# --
+# $Id:
+# --
+# This software comes with ABSOLUTELY NO WARRANTY. For details, see
+# the enclosed file COPYING for license information (AGPL). If you
+# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
+# --
+
+
+<table class="DataTable">
+    <thead>
+        <tr class="Last">
+            <th>$Text{"Queue"}</th>
+            <th style="text-align: center;">$Text{"(< 24h)"}</th>
+            <th style="text-align: center;">$Text{"1 Day"}</th>
+            <th style="text-align: center;">$Text{"2 Days"}</th>
+            <th style="text-align: center;">$Text{"3 Days"}</th>
+            <th style="text-align: center;">$Text{"4 Days"}</th>
+            <th style="text-align: center;">$Text{"5 Days"}</th>
+            <th style="text-align: center;">$Text{"6 Days"}</th>
+            <th style="text-align: center;">$Text{"7 Days"}</th>
+            <th style="text-align: center;">$Text{"8 Days"}</th>
+            <th style="text-align: center;">$Text{"9 Days and more"}</th>
+            <th style="text-align: center;">$Text{"Sum TooSLA"}</th>
+        </tr>
+    </thead>
+    <tbody>
+<!-- dtl:block:ContentLargeTicketOverView -->
+        <tr>
+            <td><a href="$Env{"BaseLink"}?Action=AgentTicketQueue;View=Small;StateType=Open;Filter=All;QueueID=$Data{"QueueID"};">$QData{"Name","20"}</a></td>
+            <td style="text-align: right;">($QData{"Day1"})</td>
+            <td style="text-align: right;">$QData{"Day2"}</td>
+            <td style="text-align: right;">$QData{"Day3"}</td>
+            <td style="text-align: right;">$QData{"Day4"}</td>
+            <td style="text-align: right;">$QData{"Day5"}</td>
+            <td style="text-align: right;">$QData{"Day6"}</td>
+            <td style="text-align: right;">$QData{"Day7"}</td>
+            <td style="text-align: right;">$QData{"Day8"}</td>
+            <td style="text-align: right;">$QData{"Day9"}</td>
+            <td style="text-align: right;">$QData{"Day10"}</td>
+            <td style="text-align: right;">$QData{"Sum"}</td>
+        </tr>
+<!-- dtl:block:ContentLargeTicketOverView -->
+<!-- dtl:block:ContentLargeTicketOverViewSum -->
+        <tr>
+            <td><strong>$QData{"Name","20"}</strong></td>
+            <td style="text-align: right;">($QData{"Day1"})</td>
+            <td style="text-align: right;"><strong>$QData{"Day2"}</strong></td>
+            <td style="text-align: right;"><strong>$QData{"Day3"}</strong></td>
+            <td style="text-align: right;"><strong>$QData{"Day4"}</strong></td>
+            <td style="text-align: right;"><strong>$QData{"Day5"}</strong></td>
+            <td style="text-align: right;"><strong>$QData{"Day6"}</strong></td>
+            <td style="text-align: right;"><strong>$QData{"Day7"}</strong></td>
+            <td style="text-align: right;"><strong>$QData{"Day8"}</strong></td>
+            <td style="text-align: right;"><strong>$QData{"Day9"}</strong></td>
+            <td style="text-align: right;"><strong>$QData{"Day10"}</strong></td>
+            <td style="text-align: right;"><strong>$QData{"Sum"}</strong></td>
+        </tr>
+<!-- dtl:block:ContentLargeTicketOverViewSum -->
+    </tbody   >
+</table>

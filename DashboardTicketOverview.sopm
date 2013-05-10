@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<otrs_package version="1.0">
+    <Name>DashboardTicketOverView</Name>
+    <Version>1.0.1</Version>
+    <Framework>3.2.x</Framework>
+    <Vendor>Daniel Obee @ 33achtzig</Vendor>
+    <URL>http://33achtzig.de/</URL>
+    <License>GNU AFFERO GENERAL PUBLIC LICENSE Version 3, November 2007</License>
+    <ChangeLog Version="1.0.1" Date="2013-04-09 11:01:51">Refined display.</ChangeLog>
+    <ChangeLog Version="1.0.0" Date="2013-04-08 21:10:51">Initial Release</ChangeLog>
+    <Description Lang="en">Displays an Overview of Open Tickets by Queue and Age</Description>
+    <Description Lang="de">Zeigt eine Übersicht der Offenen Tickets nach Queue und Alter</Description>
+    <BuildDate>?</BuildDate>
+    <BuildHost>?</BuildHost>
+    <Filelist>
+        <File Permission="644" Location="Kernel/Config/Files/DashboardTicketOverview.xml"></File>
+        <File Permission="644" Location="Kernel/Output/HTML/Standard/AgentDashboardTicketOverview.dtl"></File>
+        <File Permission="644" Location="Kernel/Output/HTML/DashboardTicketOverview.pm"></File>
+    </Filelist>
+</otrs_package>
